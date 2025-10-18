@@ -6,7 +6,19 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/isu73/laravel-bootstrap5?color=brightgreen)](https://packagist.org/packages/isu73/laravel-bootstrap5)
 
-A modern **Laravel 12 + Bootstrap 5** starter kit designed for clean front-end development and maintainable builds with **Vite** and **Sass**.
+A modern Laravel 12 + Bootstrap 5 starter kit designed for clean front-end development and maintainable builds with Vite and Sass.
+
+This template follows an “@use ready” Sass structure, which means Bootstrap 5 components are imported modularly, rather than relying on precompiled CSS.
+This approach allows you to:
+
+* Include only the Bootstrap modules you actually use.
+* Easily override variables (_variables.scss) and theme tokens.
+* Enjoy a faster, optimized build process via Vite.
+
+Using Bootstrap via Sass rather than a CDN or static .css file makes your project:
+* lighter (tree-shaken styles),
+* more customizable, and
+* future-proof for long-term scalability.
 
 ---
 
