@@ -1304,7 +1304,7 @@ http://localhost:8000/mail-preview
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-0">Laravel {{ app()->version() }} + Bootsrap 5 + Vite starter (Sass @use-ready).</p>
+        <p class="mb-0">Laravel {{ app()->version() }} + Bootsrap 5 + Vite starter (Sass @ use-ready).</p>
     </footer>
 @endsection
 @section('scripts')
