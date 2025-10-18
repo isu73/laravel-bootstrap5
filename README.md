@@ -54,6 +54,25 @@ Using Bootstrap via Sass instead of a CDN or static `.css` file makes your proje
 
 ---
 
+## 🗂️ Directory Structure
+```
+├── app/                 → Application logic
+├── bootstrap/           → App bootstrap files
+├── config/              → Configuration files
+├── database/            → Migrations / seeders / SQLite DB
+├── public/              → Web root (index.php + assets)
+├── resources/
+│   ├── js/              → Custom JavaScript
+│   ├── sass/            → Bootstrap 5 + custom Sass
+│   └── views/           → Blade templates
+├── routes/              → Web / API routes
+├── storage/             → Logs / cache / sessions
+├── artisan              → Laravel CLI
+├── composer.json        → PHP dependencies + scripts
+├── package.json         → NPM dependencies
+└── vite.config.js       → Vite configuration
+```
+
 ## 🚀 Installation
 
 ### Create a new project
