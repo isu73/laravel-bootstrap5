@@ -453,7 +453,7 @@
 </code></pre>
 
             <p class="mt-3">
-                A _custom.scss fájl az app.scss fájlba van importálva <code>@import "custom";</code> így az app.blade.php fájl head tag-ban nem kell további vite importokat alkalmazni.
+                A _custom.scss fájl az app.scss fájlba van importálva <code>@use "custom";</code> így az app.blade.php fájl head tag-ban nem kell további vite importokat alkalmazni.
                 <br>Most már bármelyik komponensnél használhatod:
             </p>
 
