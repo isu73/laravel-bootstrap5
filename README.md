@@ -132,7 +132,8 @@ Run both in parallel:
 composer run dev
 ```
 
-##⚡ Composer Scripts
+## ⚡ Composer Scripts 
+
 Command	Description
 
 ```composer setup```	Install dependencies, copy .env, migrate, and build
@@ -142,3 +143,9 @@ Command	Description
 ```composer test```	Run Laravel test suite
 
 ```composer update```	Update PHP dependencies
+
+
+
+##### Created by @isu73
+
+A clean and modern Laravel 12 + Bootstrap 5 starter template for rapid development.
