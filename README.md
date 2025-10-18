@@ -56,7 +56,35 @@ Using Bootstrap via Sass instead of a CDN or static `.css` file makes your proje
 
 ## 🚀 Installation
 
-### 1️⃣ Create a new project
+### Create a new project
 ```bash
 composer create-project isu73/laravel-bootstrap5 myapp
 cd myapp
+```
+
+### Install Node dependencies
+```bash
+npm install
+npm run build   # or: npm run dev
+```
+
+### Environment setup
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+If you prefer SQLite, simply run:
+```bash
+php artisan migrate
+```
+
+If you prefer MySQL or PostgreSQL,
+don’t forget to edit your ```.env``` file accordingly:
+```ini
+DB_CONNECTION=mysql      # or: pgsql
+DB_HOST=127.0.0.1
+DB_PORT=3306             # or: 5432 for PostgreSQL
+DB_DATABASE=my_database
+DB_USERNAME=my_user
+DB_PASSWORD=my_password
+```
