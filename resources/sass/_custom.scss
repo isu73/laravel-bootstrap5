@@ -1,0 +1,66 @@
+
+
+/* Moduláris Sass built-inok (jövőálló, nincs deprecation) */
+@use "sass:color";
+
+/* 1) Saját CSS változók (light alapértelmezés) */
+:root {
+    --bs-brand: #7952b3;
+    --bs-accent: #ff5722;
+}
+
+/* 2) Dark mód: ugyanazok a változók sötét árnyalatokkal
+   FIGYELEM: itt közvetlenül a :root-ot célozzuk az attribútummal */
+:root[data-bs-theme="dark"] {
+    --bs-brand: #b48cff;
+    --bs-accent: #ff8a50;
+}
+
+/* 3) Egyedi Bootstrap-kompatibilis osztályok
+   - Sass fallback (color.scale) -> majd felülírjuk natív CSS color-mix()-szel
+   - Így régebbi böngészőkben is kapsz “közelítő” hover-árnyalatot
+*/
+.btn-brand {
+    /* alap */
+    --bs-btn-bg: var(--bs-brand);
+    --bs-btn-border-color: var(--bs-brand);
+    --bs-btn-color: #fff;
+
+    /* Fallback hover/border (Sass): kicsit sötétebb az alaphoz képest */
+    $brand-fallback-hover: color.scale(#7952b3, $lightness: -7%);
+    $brand-fallback-border: color.scale(#7952b3, $lightness: -12%);
+
+    /* Dark módban más alap (ez csak a fallbackre hat; a valós értéket a color-mix felülírja alább) */
+    @media (prefers-color-scheme: dark) {
+        $brand-fallback-hover: color.scale(#b48cff, $lightness: -7%);
+        $brand-fallback-border: color.scale(#b48cff, $lightness: -12%);
+    }
+
+    --bs-btn-hover-bg: #{$brand-fallback-hover};
+    --bs-btn-hover-border-color: #{$brand-fallback-border};
+}
+
+/* Modern böngészők: color-mix() felülírja a fenti fallbacket */
+@supports (background: color-mix(in oklab, red 50%, white)) {
+    .btn-brand {
+        --bs-btn-hover-bg: color-mix(in oklab, var(--bs-brand) 85%, black);
+        --bs-btn-hover-border-color: color-mix(in oklab, var(--bs-brand) 75%, black);
+    }
+}
+
+/* 4) Kiegészítő util osztályok (egyszerűek, nincs szükség Sass függvényre) */
+.text-accent    { color: var(--bs-accent) !important; }
+.bg-accent      { background-color: var(--bs-accent) !important; }
+.border-accent  { border-color: var(--bs-accent) !important; }
+
+/* 5) Opcionális: egy “brand card”, ami a Bootstrap CSS változóit használja */
+.card-custom {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.08);
+    transition: background-color .2s, color .2s, box-shadow .2s;
+}
+.card-custom:hover {
+    color: var(--bs-primary);
+}

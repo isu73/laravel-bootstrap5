@@ -1,0 +1,21 @@
+* text=auto eol=lf
+
+# Szintaxis-highlight diffek
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+*.js diff=javascript
+*.json diff=json
+
+# Ezek NE kerüljenek a Packagist dist-be
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/.github export-ignore
+/node_modules export-ignore
+/vendor export-ignore
+/tests export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+

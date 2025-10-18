@@ -1,0 +1,59 @@
+# ────────────────────────────────
+# Laravel / általános fejlesztés
+# ────────────────────────────────
+*.log
+.DS_Store
+Thumbs.db
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# Környezeti fájlok
+.env
+.env.backup
+.env.production
+
+# IDE / Tooling
+/.idea
+/.vscode
+/.fleet
+/.zed
+/.nova
+
+# Composer auth és cache
+/auth.json
+
+# ────────────────────────────────
+# Node / build fájlok
+# ────────────────────────────────
+/node_modules
+/public/build
+/public/hot
+
+# ────────────────────────────────
+# Laravel storage / cache / runtime
+# ────────────────────────────────
+/storage/*.key
+/storage/app/public
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+/bootstrap/cache/*.php
+
+# Pail log mappa (ha volt)
+#/storage/pail
+
+# ────────────────────────────────
+# Vendor dependencies
+# ────────────────────────────────
+/vendor
+
+# ────────────────────────────────
+# Egyéb
+# ────────────────────────────────
+# public/storage symlink (runtime)
+public/storage
+

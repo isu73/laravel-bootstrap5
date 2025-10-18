@@ -1,0 +1,30 @@
+//@use "variables";
+//@use 'bootstrap/scss/bootstrap';
+//@use "custom";
+//
+//@import url("https://fonts.bunny.net/css?family=Nunito");
+//@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+/* resources/sass/app.scss */
+
+/* Bootstrap betöltése + konfigurálása egy lépésben */
+@use "bootstrap/scss/bootstrap" with (
+  $body-bg: #f8fafc,
+  $font-family-sans-serif: ("Nunito", sans-serif),
+  $font-size-base: 0.9rem,
+  $line-height-base: 1.6
+);
+
+/* Saját modulok (ha kellenek) */
+@use "variables" as *;
+@use "custom";
+
+/* Sima CSS importok a legvégén */
+@import url("https://fonts.bunny.net/css?family=Nunito");
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+
+
