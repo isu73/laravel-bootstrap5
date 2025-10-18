@@ -20,8 +20,6 @@ Using Bootstrap via Sass rather than a CDN or static .css file makes your projec
 * more customizable, and
 * future-proof for long-term scalability.
 
----
-
 ## 🧠 Why “@use ready” and why Bootstrap via Sass?
 
 This template follows an **“@use ready” Sass structure**, meaning Bootstrap 5 components are imported **modularly**, rather than relying on precompiled CSS.
@@ -128,7 +126,19 @@ npm run dev
 
 Laravel server → http://127.0.0.1:8000
 Vite HMR → http://127.0.0.1:5173
+
 Run both in parallel:
 ```bash
 composer run dev
 ```
+
+##⚡ Composer Scripts
+Command	Description
+
+```composer setup```	Install dependencies, copy .env, migrate, and build
+
+```composer dev```	Run Laravel server + queue + Vite concurrently
+
+```composer test```	Run Laravel test suite
+
+```composer update```	Update PHP dependencies
