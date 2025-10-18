@@ -88,3 +88,16 @@ DB_DATABASE=my_database
 DB_USERNAME=my_user
 DB_PASSWORD=my_password
 ```
+
+## 🧪 Development Server
+```bash
+php artisan serve
+npm run dev
+```
+
+Laravel server → http://127.0.0.1:8000
+Vite HMR → http://127.0.0.1:5173
+Run both in parallel:
+```bash
+composer run dev
+```
