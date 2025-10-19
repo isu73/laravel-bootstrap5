@@ -145,7 +145,3 @@ Command	Description
 ```composer update```	Update PHP dependencies
 
 
-
-##### Created by @isu73
-
-A clean and modern Laravel 12 + Bootstrap 5 starter template for rapid development.
