@@ -8,7 +8,7 @@
 
 A modern Laravel 12 + Bootstrap 5 starter kit designed for clean front-end development and maintainable builds with Vite and Sass.
 
-This template follows an “@use ready” Sass structure, which means Bootstrap 5 components are imported modularly, rather than relying on precompiled CSS.
+This template follows an “use ready” Sass structure, which means Bootstrap 5 components are imported modularly, rather than relying on precompiled CSS.
 This approach allows you to:
 
 * Include only the Bootstrap modules you actually use.
